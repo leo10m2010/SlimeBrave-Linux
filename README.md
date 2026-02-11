@@ -11,7 +11,7 @@ Original inspiration: https://github.com/ltx0101/SlimBrave
 
 ## Screenshot
 
-![SlimBrave Linux menu](assets/screenshot.png)
+![SlimBrave Linux menu](assets/screenshot-v2.png)
 
 ## Features
 
