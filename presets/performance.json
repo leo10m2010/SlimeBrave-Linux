@@ -1,0 +1,22 @@
+{
+  "MetricsReportingEnabled": 0,
+  "FeedbackSurveysEnabled": 0,
+  "BraveRewardsDisabled": 1,
+  "BraveWalletDisabled": 1,
+  "BraveVPNDisabled": 1,
+  "BraveAIChatEnabled": 0,
+  "BraveNewsDisabled": 1,
+  "BackgroundModeEnabled": 0,
+  "MediaRecommendationsEnabled": 0,
+  "ShoppingListEnabled": 0,
+  "AlwaysOpenPdfExternally": 1,
+  "TranslateEnabled": 0,
+  "SpellcheckEnabled": 0,
+  "PromotionsEnabled": 0,
+  "SearchSuggestEnabled": 0,
+  "DefaultBrowserSettingEnabled": 0,
+  "BraveWebDiscoveryEnabled": 0,
+  "BraveStatsPingEnabled": 0,
+  "BravePlaylistEnabled": 0,
+  "DnsOverHttpsMode": "automatic"
+}

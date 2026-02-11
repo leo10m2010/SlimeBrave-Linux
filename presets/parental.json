@@ -1,0 +1,23 @@
+{
+  "BrowserSignin": 0,
+  "BlockThirdPartyCookies": 1,
+  "ForceGoogleSafeSearch": 1,
+  "IncognitoModeAvailability": 1,
+  "BraveRewardsDisabled": 1,
+  "BraveWalletDisabled": 1,
+  "BraveVPNDisabled": 1,
+  "BraveAIChatEnabled": 0,
+  "TorDisabled": 1,
+  "SyncDisabled": 1,
+  "BraveNewsDisabled": 1,
+  "BackgroundModeEnabled": 0,
+  "MediaRecommendationsEnabled": 0,
+  "ShoppingListEnabled": 0,
+  "PromotionsEnabled": 0,
+  "SearchSuggestEnabled": 0,
+  "PrintingEnabled": 0,
+  "DeveloperToolsDisabled": 1,
+  "BraveWebDiscoveryEnabled": 0,
+  "DnsOverHttpsMode": "secure",
+  "DnsOverHttpsTemplates": "https://family.cloudflare-dns.com/dns-query"
+}
