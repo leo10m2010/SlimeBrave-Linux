@@ -191,6 +191,276 @@ t() {
     fr:help_title) echo "Comment utiliser:" ;;
     pt:help_title) echo "Como usar:" ;;
 
+    es:warn_no_policy_backup) echo "No hay politica actual para respaldar." ;;
+    en:warn_no_policy_backup) echo "No current policy to back up." ;;
+    fr:warn_no_policy_backup) echo "Aucune politique actuelle a sauvegarder." ;;
+    pt:warn_no_policy_backup) echo "Nao ha politica atual para backup." ;;
+
+    es:err_backup_create) echo "No se pudo crear backup de" ;;
+    en:err_backup_create) echo "Could not create backup of" ;;
+    fr:err_backup_create) echo "Impossible de creer une sauvegarde de" ;;
+    pt:err_backup_create) echo "Nao foi possivel criar backup de" ;;
+
+    es:ok_backup_created) echo "Backup creado:" ;;
+    en:ok_backup_created) echo "Backup created:" ;;
+    fr:ok_backup_created) echo "Sauvegarde creee:" ;;
+    pt:ok_backup_created) echo "Backup criado:" ;;
+
+    es:ok_applied_in) echo "Aplicado en:" ;;
+    en:ok_applied_in) echo "Applied to:" ;;
+    fr:ok_applied_in) echo "Applique a:" ;;
+    pt:ok_applied_in) echo "Aplicado em:" ;;
+
+    es:ok_done_verify) echo "Listo. Reinicia Brave y verifica en brave://policy" ;;
+    en:ok_done_verify) echo "Done. Restart Brave and verify at brave://policy" ;;
+    fr:ok_done_verify) echo "Termine. Redemarrez Brave et verifiez dans brave://policy" ;;
+    pt:ok_done_verify) echo "Pronto. Reinicie o Brave e verifique em brave://policy" ;;
+
+    es:warn_no_backups) echo "No hay backups en" ;;
+    en:warn_no_backups) echo "No backups found in" ;;
+    fr:warn_no_backups) echo "Aucune sauvegarde dans" ;;
+    pt:warn_no_backups) echo "Nenhum backup em" ;;
+
+    es:backups_available) echo "Backups disponibles:" ;;
+    en:backups_available) echo "Available backups:" ;;
+    fr:backups_available) echo "Sauvegardes disponibles:" ;;
+    pt:backups_available) echo "Backups disponiveis:" ;;
+
+    es:prompt_choose_backup) echo "Elige backup para restaurar: " ;;
+    en:prompt_choose_backup) echo "Choose backup to restore: " ;;
+    fr:prompt_choose_backup) echo "Choisissez la sauvegarde a restaurer: " ;;
+    pt:prompt_choose_backup) echo "Escolha o backup para restaurar: " ;;
+
+    es:err_invalid_selection) echo "Seleccion invalida." ;;
+    en:err_invalid_selection) echo "Invalid selection." ;;
+    fr:err_invalid_selection) echo "Selection invalide." ;;
+    pt:err_invalid_selection) echo "Selecao invalida." ;;
+
+    es:err_restore_failed) echo "No se pudo restaurar en:" ;;
+    en:err_restore_failed) echo "Could not restore to:" ;;
+    fr:err_restore_failed) echo "Impossible de restaurer vers:" ;;
+    pt:err_restore_failed) echo "Nao foi possivel restaurar em:" ;;
+
+    es:ok_restore_done) echo "Backup restaurado en:" ;;
+    en:ok_restore_done) echo "Backup restored to:" ;;
+    fr:ok_restore_done) echo "Sauvegarde restauree vers:" ;;
+    pt:ok_restore_done) echo "Backup restaurado em:" ;;
+
+    es:prompt_reset_confirm) echo "Esto elimina" ;;
+    en:prompt_reset_confirm) echo "This will delete" ;;
+    fr:prompt_reset_confirm) echo "Cela supprimera" ;;
+    pt:prompt_reset_confirm) echo "Isto removera" ;;
+
+    es:warn_cancelled) echo "Operacion cancelada." ;;
+    en:warn_cancelled) echo "Operation cancelled." ;;
+    fr:warn_cancelled) echo "Operation annulee." ;;
+    pt:warn_cancelled) echo "Operacao cancelada." ;;
+
+    es:warn_no_active_file_remove) echo "No habia archivo para eliminar en la ruta activa." ;;
+    en:warn_no_active_file_remove) echo "No file to remove at active path." ;;
+    fr:warn_no_active_file_remove) echo "Aucun fichier a supprimer sur le chemin actif." ;;
+    pt:warn_no_active_file_remove) echo "Nenhum arquivo para remover no caminho ativo." ;;
+
+    es:ok_removed) echo "Eliminado:" ;;
+    en:ok_removed) echo "Removed:" ;;
+    fr:ok_removed) echo "Supprime:" ;;
+    pt:ok_removed) echo "Removido:" ;;
+
+    es:err_remove_failed) echo "No se pudo eliminar:" ;;
+    en:err_remove_failed) echo "Could not remove:" ;;
+    fr:err_remove_failed) echo "Impossible de supprimer:" ;;
+    pt:err_remove_failed) echo "Nao foi possivel remover:" ;;
+
+    es:err_write_failed) echo "No se pudo escribir:" ;;
+    en:err_write_failed) echo "Could not write:" ;;
+    fr:err_write_failed) echo "Impossible d'ecrire:" ;;
+    pt:err_write_failed) echo "Nao foi possivel gravar:" ;;
+
+    es:confirm_suffix) echo "Continuar? (y/N): " ;;
+    en:confirm_suffix) echo "Continue? (y/N): " ;;
+    fr:confirm_suffix) echo "Continuer? (y/N): " ;;
+    pt:confirm_suffix) echo "Continuar? (y/N): " ;;
+
+    es:dns_title) echo "DNS over HTTPS" ;;
+    en:dns_title) echo "DNS over HTTPS" ;;
+    fr:dns_title) echo "DNS over HTTPS" ;;
+    pt:dns_title) echo "DNS over HTTPS" ;;
+
+    es:dns_current) echo "Estado actual:" ;;
+    en:dns_current) echo "Current state:" ;;
+    fr:dns_current) echo "Etat actuel:" ;;
+    pt:dns_current) echo "Estado atual:" ;;
+
+    es:dns_clear) echo "limpiar valor" ;;
+    en:dns_clear) echo "clear value" ;;
+    fr:dns_clear) echo "effacer la valeur" ;;
+    pt:dns_clear) echo "limpar valor" ;;
+
+    es:dns_back) echo "volver" ;;
+    en:dns_back) echo "back" ;;
+    fr:dns_back) echo "retour" ;;
+    pt:dns_back) echo "voltar" ;;
+
+    es:dns_prompt_template) echo "Template DoH (ej: https://dns.google/dns-query): " ;;
+    en:dns_prompt_template) echo "DoH template (e.g.: https://dns.google/dns-query): " ;;
+    fr:dns_prompt_template) echo "Template DoH (ex: https://dns.google/dns-query): " ;;
+    pt:dns_prompt_template) echo "Template DoH (ex: https://dns.google/dns-query): " ;;
+
+    es:toggle_select_prompt) echo "Selecciona opcion para toggle: " ;;
+    en:toggle_select_prompt) echo "Choose option to toggle: " ;;
+    fr:toggle_select_prompt) echo "Choisissez l'option a basculer: " ;;
+    pt:toggle_select_prompt) echo "Escolha opcao para alternar: " ;;
+
+    es:auto_apply_enabled) echo "Aplicacion automatica activada" ;;
+    en:auto_apply_enabled) echo "Auto-apply enabled" ;;
+    fr:auto_apply_enabled) echo "Application automatique activee" ;;
+    pt:auto_apply_enabled) echo "Aplicacao automatica ativada" ;;
+
+    es:manual_cat_telemetry) echo "Telemetria y reportes" ;;
+    en:manual_cat_telemetry) echo "Telemetry and reports" ;;
+    fr:manual_cat_telemetry) echo "Telemetrie et rapports" ;;
+    pt:manual_cat_telemetry) echo "Telemetria e relatorios" ;;
+
+    es:manual_cat_privacy) echo "Privacidad y seguridad" ;;
+    en:manual_cat_privacy) echo "Privacy and security" ;;
+    fr:manual_cat_privacy) echo "Confidentialite et securite" ;;
+    pt:manual_cat_privacy) echo "Privacidade e seguranca" ;;
+
+    es:manual_cat_features) echo "Funciones Brave" ;;
+    en:manual_cat_features) echo "Brave features" ;;
+    fr:manual_cat_features) echo "Fonctionnalites Brave" ;;
+    pt:manual_cat_features) echo "Funcoes do Brave" ;;
+
+    es:manual_cat_performance) echo "Rendimiento y bloat" ;;
+    en:manual_cat_performance) echo "Performance and bloat" ;;
+    fr:manual_cat_performance) echo "Performance et bloat" ;;
+    pt:manual_cat_performance) echo "Desempenho e bloat" ;;
+
+    es:manual_cat_dns) echo "DNS over HTTPS" ;;
+    en:manual_cat_dns) echo "DNS over HTTPS" ;;
+    fr:manual_cat_dns) echo "DNS over HTTPS" ;;
+    pt:manual_cat_dns) echo "DNS over HTTPS" ;;
+
+    es:manual_back) echo "Volver" ;;
+    en:manual_back) echo "Back" ;;
+    fr:manual_back) echo "Retour" ;;
+    pt:manual_back) echo "Voltar" ;;
+
+    es:preset_balanced_rec) echo "balanced (recomendado)" ;;
+    en:preset_balanced_rec) echo "balanced (recommended)" ;;
+    fr:preset_balanced_rec) echo "balanced (recommande)" ;;
+    pt:preset_balanced_rec) echo "balanced (recomendado)" ;;
+
+    es:preset_back) echo "volver" ;;
+    en:preset_back) echo "back" ;;
+    fr:preset_back) echo "retour" ;;
+    pt:preset_back) echo "voltar" ;;
+
+    es:preset_loaded_disk_fail) echo "Preset cargado en menu, pero no se pudo escribir en disco." ;;
+    en:preset_loaded_disk_fail) echo "Preset loaded in menu, but could not write to disk." ;;
+    fr:preset_loaded_disk_fail) echo "Preset charge dans le menu, mais echec d'ecriture sur disque." ;;
+    pt:preset_loaded_disk_fail) echo "Preset carregado no menu, mas nao foi possivel gravar em disco." ;;
+
+    es:pending_title) echo "Cambios pendientes:" ;;
+    en:pending_title) echo "Pending changes:" ;;
+    fr:pending_title) echo "Changements en attente:" ;;
+    pt:pending_title) echo "Alteracoes pendentes:" ;;
+
+    es:no_pending_changes) echo "Sin cambios pendientes." ;;
+    en:no_pending_changes) echo "No pending changes." ;;
+    fr:no_pending_changes) echo "Aucun changement en attente." ;;
+    pt:no_pending_changes) echo "Sem alteracoes pendentes." ;;
+
+    es:status_keys_on_disk) echo "Keys activas en disco:" ;;
+    en:status_keys_on_disk) echo "Active keys on disk:" ;;
+    fr:status_keys_on_disk) echo "Cles actives sur disque:" ;;
+    pt:status_keys_on_disk) echo "Chaves ativas em disco:" ;;
+
+    es:status_file_missing) echo "No existe aun (se crea al aplicar por primera vez)." ;;
+    en:status_file_missing) echo "Does not exist yet (created on first apply)." ;;
+    fr:status_file_missing) echo "N'existe pas encore (cree a la premiere application)." ;;
+    pt:status_file_missing) echo "Ainda nao existe (criado na primeira aplicacao)." ;;
+
+    es:status_options_on) echo "Opciones ON:" ;;
+    en:status_options_on) echo "Options ON:" ;;
+    fr:status_options_on) echo "Options ON:" ;;
+    pt:status_options_on) echo "Opcoes ON:" ;;
+
+    es:status_pending_unapplied) echo "Pendientes sin aplicar:" ;;
+    en:status_pending_unapplied) echo "Pending unapplied:" ;;
+    fr:status_pending_unapplied) echo "En attente non appliques:" ;;
+    pt:status_pending_unapplied) echo "Pendentes sem aplicar:" ;;
+
+    es:status_state) echo "Estado:" ;;
+    en:status_state) echo "State:" ;;
+    fr:status_state) echo "Etat:" ;;
+    pt:status_state) echo "Estado:" ;;
+
+    es:status_synced) echo "Menu y disco en sincronizacion" ;;
+    en:status_synced) echo "Menu and disk are in sync" ;;
+    fr:status_synced) echo "Le menu et le disque sont synchronises" ;;
+    pt:status_synced) echo "Menu e disco estao sincronizados" ;;
+
+    es:status_not_synced) echo "Hay cambios locales sin aplicar" ;;
+    en:status_not_synced) echo "There are local unapplied changes" ;;
+    fr:status_not_synced) echo "Il y a des changements locaux non appliques" ;;
+    pt:status_not_synced) echo "Ha alteracoes locais sem aplicar" ;;
+
+    es:tip_auto_apply) echo "Tip: presets y toggles manuales se aplican automaticamente." ;;
+    en:tip_auto_apply) echo "Tip: presets and manual toggles apply automatically." ;;
+    fr:tip_auto_apply) echo "Astuce: les presets et toggles manuels s'appliquent automatiquement." ;;
+    pt:tip_auto_apply) echo "Dica: presets e toggles manuais sao aplicados automaticamente." ;;
+
+    es:tip_restart_verify) echo "Luego reinicia Brave y abre brave://policy." ;;
+    en:tip_restart_verify) echo "Then restart Brave and open brave://policy." ;;
+    fr:tip_restart_verify) echo "Ensuite redemarrez Brave et ouvrez brave://policy." ;;
+    pt:tip_restart_verify) echo "Depois reinicie o Brave e abra brave://policy." ;;
+
+    es:help_step_1) echo "1) Elige un preset rapido o entra a configuracion manual." ;;
+    en:help_step_1) echo "1) Pick a quick preset or enter manual configuration." ;;
+    fr:help_step_1) echo "1) Choisissez un preset rapide ou ouvrez la configuration manuelle." ;;
+    pt:help_step_1) echo "1) Escolha um preset rapido ou entre na configuracao manual." ;;
+
+    es:help_step_2) echo "2) Cambios se aplican automaticamente." ;;
+    en:help_step_2) echo "2) Changes are applied automatically." ;;
+    fr:help_step_2) echo "2) Les changements sont appliques automatiquement." ;;
+    pt:help_step_2) echo "2) As alteracoes sao aplicadas automaticamente." ;;
+
+    es:help_step_3) echo "3) Revisa cambios pendientes/estado." ;;
+    en:help_step_3) echo "3) Check pending changes/status." ;;
+    fr:help_step_3) echo "3) Verifiez les changements en attente/l'etat." ;;
+    pt:help_step_3) echo "3) Verifique alteracoes pendentes/estado." ;;
+
+    es:help_step_4) echo "4) Reinicia Brave." ;;
+    en:help_step_4) echo "4) Restart Brave." ;;
+    fr:help_step_4) echo "4) Redemarrez Brave." ;;
+    pt:help_step_4) echo "4) Reinicie o Brave." ;;
+
+    es:help_step_5) echo "5) Verifica en brave://policy." ;;
+    en:help_step_5) echo "5) Verify in brave://policy." ;;
+    fr:help_step_5) echo "5) Verifiez dans brave://policy." ;;
+    pt:help_step_5) echo "5) Verifique em brave://policy." ;;
+
+    es:notes_title) echo "Notas:" ;;
+    en:notes_title) echo "Notes:" ;;
+    fr:notes_title) echo "Notes:" ;;
+    pt:notes_title) echo "Notas:" ;;
+
+    es:note_active_path_only) echo "- El script escribe solo en la ruta activa detectada para evitar duplicados." ;;
+    en:note_active_path_only) echo "- The script writes only to the detected active path to avoid duplicates." ;;
+    fr:note_active_path_only) echo "- Le script ecrit uniquement sur le chemin actif detecte pour eviter les doublons." ;;
+    pt:note_active_path_only) echo "- O script grava apenas no caminho ativo detectado para evitar duplicados." ;;
+
+    es:note_backup_restore) echo "- Usa Backup/Restore para volver atras." ;;
+    en:note_backup_restore) echo "- Use Backup/Restore to roll back." ;;
+    fr:note_backup_restore) echo "- Utilisez Backup/Restore pour revenir en arriere." ;;
+    pt:note_backup_restore) echo "- Use Backup/Restore para voltar atras." ;;
+
+    es:note_reset) echo "- Usa Reset total para eliminar slimbrave.json." ;;
+    en:note_reset) echo "- Use Full reset to remove slimbrave.json." ;;
+    fr:note_reset) echo "- Utilisez le reset complet pour supprimer slimbrave.json." ;;
+    pt:note_reset) echo "- Use reset total para remover slimbrave.json." ;;
+
     *) echo "$key" ;;
   esac
 }
@@ -742,7 +1012,7 @@ backup_current_policy() {
   ts=$(date +"%Y%m%d-%H%M%S")
 
   if [[ ! -f "$POLICY_FILE" ]]; then
-    say_warn "No hay politica actual para respaldar."
+    say_warn "$(t warn_no_policy_backup)"
     return 1
   fi
 
@@ -754,11 +1024,11 @@ backup_current_policy() {
   elif sudo sh -c "cat \"$POLICY_FILE\" > \"$backup_file\""; then
     :
   else
-    say_err "No se pudo crear backup de $POLICY_FILE"
+    say_err "$(t err_backup_create) $POLICY_FILE"
     return 1
   fi
 
-  say_ok "Backup creado: $backup_file"
+  say_ok "$(t ok_backup_created) $backup_file"
   return 0
 }
 
@@ -777,15 +1047,15 @@ apply_configuration() {
     :
   else
     rm -f "$tmp"
-    say_err "No se pudo escribir: $POLICY_FILE"
+    say_err "$(t err_write_failed) $POLICY_FILE"
     return 1
   fi
 
   rm -f "$tmp"
 
   load_current_policy
-  say_ok "Aplicado en: $POLICY_FILE"
-  say_ok "Listo. Reinicia Brave y verifica en brave://policy"
+  say_ok "$(t ok_applied_in) $POLICY_FILE"
+  say_ok "$(t ok_done_verify)"
   return 0
 }
 
@@ -799,12 +1069,12 @@ restore_backup() {
   done < <(ls -1 "$BACKUP_DIR"/*.json 2>/dev/null | sort -r)
 
   if (( ${#files[@]} == 0 )); then
-    say_warn "No hay backups en $BACKUP_DIR"
+    say_warn "$(t warn_no_backups) $BACKUP_DIR"
     return 1
   fi
 
   echo
-  echo "Backups disponibles:"
+  echo "$(t backups_available)"
   local i=1
   for f in "${files[@]}"; do
     echo "  $i) $(basename "$f")"
@@ -812,9 +1082,9 @@ restore_backup() {
   done
 
   echo
-  read -r -p "Elige backup para restaurar: " choice
+  read -r -p "$(t prompt_choose_backup)" choice
   if ! [[ "$choice" =~ ^[0-9]+$ ]] || (( choice < 1 || choice > ${#files[@]} )); then
-    say_err "Seleccion invalida."
+    say_err "$(t err_invalid_selection)"
     return 1
   fi
 
@@ -829,11 +1099,11 @@ restore_backup() {
   elif sudo install -m 644 "$selected" "$POLICY_FILE"; then
     :
   else
-    say_err "No se pudo restaurar en: $POLICY_FILE"
+    say_err "$(t err_restore_failed) $POLICY_FILE"
     return 1
   fi
 
-  say_ok "Backup restaurado en: $POLICY_FILE"
+  say_ok "$(t ok_restore_done) $POLICY_FILE"
 
   load_current_policy
   return 0
@@ -841,26 +1111,26 @@ restore_backup() {
 
 reset_policy() {
   detect_policy_file
-  read -r -p "Esto elimina $POLICY_FILE. Continuar? (y/N): " ans
+  read -r -p "$(t prompt_reset_confirm) $POLICY_FILE. $(t confirm_suffix)" ans
   if [[ ! "$ans" =~ ^[Yy]$ ]]; then
-    say_warn "Operacion cancelada."
+    say_warn "$(t warn_cancelled)"
     return 1
   fi
 
   backup_current_policy >/dev/null 2>&1 || true
 
   if [[ ! -f "$POLICY_FILE" ]]; then
-    say_warn "No habia archivo para eliminar en la ruta activa."
+    say_warn "$(t warn_no_active_file_remove)"
     load_current_policy
     return 0
   fi
 
   if rm -f "$POLICY_FILE" 2>/dev/null; then
-    say_ok "Eliminado: $POLICY_FILE"
+    say_ok "$(t ok_removed) $POLICY_FILE"
   elif sudo rm -f "$POLICY_FILE"; then
-    say_ok "Eliminado: $POLICY_FILE"
+    say_ok "$(t ok_removed) $POLICY_FILE"
   else
-    say_err "No se pudo eliminar: $POLICY_FILE"
+    say_err "$(t err_remove_failed) $POLICY_FILE"
     return 1
   fi
 
@@ -883,14 +1153,14 @@ status_text() {
 
 show_dns_status() {
   case "$DNS_MODE" in
-    "") echo "No configurado" ;;
+    "") echo "Not configured" ;;
     automatic) echo "automatic" ;;
     off) echo "off" ;;
     secure)
       if [[ -n "$DNS_TEMPLATES" ]]; then
         echo "custom ($DNS_TEMPLATES)"
       else
-        echo "custom (sin template)"
+        echo "custom (no template)"
       fi
       ;;
     *) echo "$DNS_MODE" ;;
@@ -911,16 +1181,16 @@ choose_dns_mode() {
   while true; do
     screen_clear
     print_banner
-    echo "DNS over HTTPS"
-    echo "Estado actual: $(show_dns_status)"
+    echo "$(t dns_title)"
+    echo "$(t dns_current) $(show_dns_status)"
     echo
     menu_item "1" "automatic"
     menu_item "2" "off"
     menu_item "3" "custom"
-    menu_item "4" "limpiar valor"
-    menu_item "0" "volver"
+    menu_item "4" "$(t dns_clear)"
+    menu_item "0" "$(t dns_back)"
     echo
-    read -r -p "Selecciona opcion: " c
+    read -r -p "$(t main_select)" c
     case "$c" in
       1)
         DNS_MODE="automatic"
@@ -940,7 +1210,7 @@ choose_dns_mode() {
         ;;
       3)
         DNS_MODE="secure"
-        read -r -p "Template DoH (ej: https://dns.google/dns-query): " DNS_TEMPLATES
+        read -r -p "$(t dns_prompt_template)" DNS_TEMPLATES
         if ! apply_configuration; then
           pause_enter
         fi
@@ -981,11 +1251,11 @@ category_menu() {
     done
 
     echo
-    echo "Auto-apply enabled"
-    hotkey_item "b" "volver"
-    hotkey_item "q" "salir"
+    echo "$(t auto_apply_enabled)"
+    hotkey_item "b" "$(t manual_back)"
+    hotkey_item "q" "$(t main_exit)"
     echo
-    read -r -p "Selecciona opcion para toggle: " c
+    read -r -p "$(t toggle_select_prompt)" c
 
     case "$c" in
       b|B) return ;;
@@ -1016,19 +1286,19 @@ manual_config_menu() {
     print_banner
     echo "$(t manual_title)"
     echo
-    menu_item "1" "Telemetria y reportes"
-    menu_item "2" "Privacidad y seguridad"
-    menu_item "3" "Funciones Brave"
-    menu_item "4" "Rendimiento y bloat"
-    menu_item "5" "DNS over HTTPS"
-    menu_item "0" "Volver"
+    menu_item "1" "$(t manual_cat_telemetry)"
+    menu_item "2" "$(t manual_cat_privacy)"
+    menu_item "3" "$(t manual_cat_features)"
+    menu_item "4" "$(t manual_cat_performance)"
+    menu_item "5" "$(t manual_cat_dns)"
+    menu_item "0" "$(t manual_back)"
     echo
-    read -r -p "Selecciona opcion: " c
+    read -r -p "$(t main_select)" c
     case "$c" in
-      1) category_menu "telemetry" "Telemetria y reportes" ;;
-      2) category_menu "privacy" "Privacidad y seguridad" ;;
-      3) category_menu "features" "Funciones Brave" ;;
-      4) category_menu "performance" "Rendimiento y bloat" ;;
+      1) category_menu "telemetry" "$(t manual_cat_telemetry)" ;;
+      2) category_menu "privacy" "$(t manual_cat_privacy)" ;;
+      3) category_menu "features" "$(t manual_cat_features)" ;;
+      4) category_menu "performance" "$(t manual_cat_performance)" ;;
       5) choose_dns_mode ;;
       0) return ;;
       *) say_err "$(t invalid_option)"; sleep 1 ;;
@@ -1042,12 +1312,12 @@ preset_menu() {
     print_banner
     echo "$(t presets_title)"
     echo
-    menu_item "1" "balanced (recomendado)"
+    menu_item "1" "$(t preset_balanced_rec)"
     menu_item "2" "max-privacy"
     menu_item "3" "performance"
     menu_item "4" "developer"
     menu_item "5" "parental"
-    menu_item "0" "volver"
+    menu_item "0" "$(t preset_back)"
     echo
     echo "$(t recommended_tip)"
     read -r -p "$(t preset_prompt)" c
@@ -1056,9 +1326,9 @@ preset_menu() {
       1)
         apply_preset "balanced"
         if apply_configuration; then
-          say_ok "Preset balanced aplicado."
+          say_ok "Preset balanced applied."
         else
-          say_warn "Preset cargado en menu, pero no se pudo escribir en disco."
+          say_warn "$(t preset_loaded_disk_fail)"
         fi
         pause_enter
         return
@@ -1066,9 +1336,9 @@ preset_menu() {
       2)
         apply_preset "max-privacy"
         if apply_configuration; then
-          say_ok "Preset max-privacy aplicado."
+          say_ok "Preset max-privacy applied."
         else
-          say_warn "Preset cargado en menu, pero no se pudo escribir en disco."
+          say_warn "$(t preset_loaded_disk_fail)"
         fi
         pause_enter
         return
@@ -1076,9 +1346,9 @@ preset_menu() {
       3)
         apply_preset "performance"
         if apply_configuration; then
-          say_ok "Preset performance aplicado."
+          say_ok "Preset performance applied."
         else
-          say_warn "Preset cargado en menu, pero no se pudo escribir en disco."
+          say_warn "$(t preset_loaded_disk_fail)"
         fi
         pause_enter
         return
@@ -1086,9 +1356,9 @@ preset_menu() {
       4)
         apply_preset "developer"
         if apply_configuration; then
-          say_ok "Preset developer aplicado."
+          say_ok "Preset developer applied."
         else
-          say_warn "Preset cargado en menu, pero no se pudo escribir en disco."
+          say_warn "$(t preset_loaded_disk_fail)"
         fi
         pause_enter
         return
@@ -1096,9 +1366,9 @@ preset_menu() {
       5)
         apply_preset "parental"
         if apply_configuration; then
-          say_ok "Preset parental aplicado."
+          say_ok "Preset parental applied."
         else
-          say_warn "Preset cargado en menu, pero no se pudo escribir en disco."
+          say_warn "$(t preset_loaded_disk_fail)"
         fi
         pause_enter
         return
@@ -1115,7 +1385,7 @@ show_pending_changes() {
 
   local count
   count=$(pending_changes_count)
-  echo "Cambios pendientes: $count"
+  echo "$(t pending_title) $count"
   echo
 
   local id
@@ -1130,7 +1400,7 @@ show_pending_changes() {
   fi
 
   if (( count == 0 )); then
-    say_warn "No pending changes."
+    say_warn "$(t no_pending_changes)"
   fi
   pause_enter
 }
@@ -1171,29 +1441,29 @@ show_status_screen() {
   echo "$(t status_title_file)"
   if [[ -f "$POLICY_FILE" ]]; then
     printf " - %b[OK]%b %s\n" "$C_OK" "$C_RESET" "$POLICY_FILE"
-    echo " - Keys activas en disco: $keys"
+    echo " - $(t status_keys_on_disk) $keys"
   else
     printf " - %b[--]%b %s\n" "$C_WARN" "$C_RESET" "$POLICY_FILE"
-    echo " - No existe aun (se crea al aplicar por primera vez)."
+    echo " - $(t status_file_missing)"
   fi
 
   echo
   echo "$(t status_title_menu)"
-  echo " - Opciones ON: $(count_enabled)/${#OPTION_IDS[@]}"
+  echo " - $(t status_options_on) $(count_enabled)/${#OPTION_IDS[@]}"
   echo " - DNS: $(show_dns_status)"
 
   echo
   echo "$(t status_title_sync)"
-  echo " - Pendientes sin aplicar: $pending"
+  echo " - $(t status_pending_unapplied) $pending"
   if (( pending == 0 )); then
-    printf " - %bEstado:%b Menu y disco en sincronizacion\n" "$C_OK" "$C_RESET"
+    printf " - %b%s%b %s\n" "$C_OK" "$(t status_state)" "$C_RESET" "$(t status_synced)"
   else
-    printf " - %bEstado:%b Hay cambios locales sin aplicar\n" "$C_WARN" "$C_RESET"
+    printf " - %b%s%b %s\n" "$C_WARN" "$(t status_state)" "$C_RESET" "$(t status_not_synced)"
   fi
 
   echo
-  echo "Tip: presets y toggles manuales se aplican automaticamente."
-  echo "Luego reinicia Brave y abre brave://policy."
+  echo "$(t tip_auto_apply)"
+  echo "$(t tip_restart_verify)"
   pause_enter
 }
 
@@ -1202,16 +1472,16 @@ show_help() {
   print_banner
   cat <<EOF
 $(t help_title)
-1) Elige un preset rapido o entra a configuracion manual.
-2) Cambios se aplican automaticamente.
-3) Revisa cambios pendientes/estado.
-4) Reinicia Brave.
-5) Verifica en brave://policy.
+$(t help_step_1)
+$(t help_step_2)
+$(t help_step_3)
+$(t help_step_4)
+$(t help_step_5)
 
-Notas:
-- El script escribe solo en la ruta activa detectada para evitar duplicados.
-- Usa Backup/Restore para volver atras.
-- Usa Reset total para eliminar slimbrave.json.
+$(t notes_title)
+$(t note_active_path_only)
+$(t note_backup_restore)
+$(t note_reset)
 EOF
   pause_enter
 }
