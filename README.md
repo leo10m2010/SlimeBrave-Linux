@@ -2,7 +2,9 @@
 
 SlimBrave Linux is a terminal tool to debloat Brave on Linux using managed policies.
 
-It is inspired by SlimBrave (PowerShell) and adapted for Linux with an easy menu.
+It is inspired by the original SlimBrave PowerShell project and reworked for Linux with a simple interactive menu.
+
+Original inspiration: https://github.com/ltx0101/SlimBrave
 
 ## Features
 
