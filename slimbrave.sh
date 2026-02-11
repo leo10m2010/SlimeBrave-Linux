@@ -8,6 +8,8 @@ set -u
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$SCRIPT_DIR/backups"
+CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/slimbrave"
+CONFIG_FILE="$CONFIG_DIR/config.env"
 
 declare -a OPTION_IDS=()
 declare -A OPT_CATEGORY=()
@@ -61,6 +63,30 @@ detect_default_language() {
     en* ) UI_LANG="en" ;;
     * ) UI_LANG="es" ;;
   esac
+}
+
+load_user_config() {
+  if [[ ! -f "$CONFIG_FILE" ]]; then
+    return
+  fi
+
+  while IFS='=' read -r key value; do
+    [[ -z "${key:-}" ]] && continue
+    case "$key" in
+      UI_LANG)
+        case "$value" in
+          es|en|fr|pt) UI_LANG="$value" ;;
+        esac
+        ;;
+    esac
+  done < "$CONFIG_FILE"
+}
+
+save_user_config() {
+  mkdir -p "$CONFIG_DIR"
+  cat > "$CONFIG_FILE" <<EOF
+UI_LANG=$UI_LANG
+EOF
 }
 
 t() {
@@ -1419,10 +1445,10 @@ language_menu() {
     echo
     read -r -p "$(t main_select)" c
     case "$c" in
-      1) UI_LANG="es"; say_ok "$(t lang_changed)"; pause_enter; return ;;
-      2) UI_LANG="en"; say_ok "$(t lang_changed)"; pause_enter; return ;;
-      3) UI_LANG="fr"; say_ok "$(t lang_changed)"; pause_enter; return ;;
-      4) UI_LANG="pt"; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      1) UI_LANG="es"; save_user_config; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      2) UI_LANG="en"; save_user_config; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      3) UI_LANG="fr"; save_user_config; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      4) UI_LANG="pt"; save_user_config; say_ok "$(t lang_changed)"; pause_enter; return ;;
       0) return ;;
       *) say_err "$(t invalid_option)"; sleep 1 ;;
     esac
@@ -1528,6 +1554,7 @@ main_menu() {
 
 main() {
   detect_default_language
+  load_user_config
   init_colors
   init_options
   load_current_policy

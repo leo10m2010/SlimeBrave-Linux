@@ -23,6 +23,7 @@ Original inspiration: https://github.com/ltx0101/SlimBrave
 - Manual toggle mode (option by option)
 - Presets and manual toggles auto-apply immediately
 - Language switch in menu: Spanish, English, French, Portuguese
+- Selected language is saved and restored on next run
 - DNS over HTTPS mode control
 - Backup, restore, and reset
 - Writes a managed policy file to the active Brave Linux policy path
