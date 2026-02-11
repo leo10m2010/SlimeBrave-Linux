@@ -1,10 +1,17 @@
 # SlimBrave Linux
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-orange.svg)](#requirements)
+
 SlimBrave Linux is a terminal tool to debloat Brave on Linux using managed policies.
 
 It is inspired by the original SlimBrave PowerShell project and reworked for Linux with a simple interactive menu.
 
 Original inspiration: https://github.com/ltx0101/SlimBrave
+
+## Screenshot
+
+![SlimBrave Linux menu](assets/screenshot.png)
 
 ## Features
 
@@ -72,4 +79,4 @@ PRs and issues are welcome.
 
 ## License
 
-MIT. See `LICENSE`.
+This project is licensed under the MIT License. See `LICENSE`.
