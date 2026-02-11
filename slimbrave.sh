@@ -39,6 +39,7 @@ C_WARN=""
 C_ERR=""
 TRUECOLOR_ENABLED=0
 ANIMATE_TITLE=1
+UI_LANG="es"
 
 if [[ "${SLIMBRAVE_ANIMATE:-1}" == "0" ]]; then
   ANIMATE_TITLE=0
@@ -48,6 +49,149 @@ supports_utf8() {
   case "${LC_ALL:-${LANG:-}}" in
     *UTF-8*|*utf8*) return 0 ;;
     *) return 1 ;;
+  esac
+}
+
+detect_default_language() {
+  local lang
+  lang=$(printf '%s' "${LC_ALL:-${LANG:-es}}" | tr '[:upper:]' '[:lower:]')
+  case "$lang" in
+    fr* ) UI_LANG="fr" ;;
+    pt* ) UI_LANG="pt" ;;
+    en* ) UI_LANG="en" ;;
+    * ) UI_LANG="es" ;;
+  esac
+}
+
+t() {
+  local key="$1"
+  case "${UI_LANG}:${key}" in
+    es:press_enter) echo "Presiona Enter para continuar..." ;;
+    en:press_enter) echo "Press Enter to continue..." ;;
+    fr:press_enter) echo "Appuyez sur Entree pour continuer..." ;;
+    pt:press_enter) echo "Pressione Enter para continuar..." ;;
+
+    es:invalid_option) echo "Opcion invalida" ;;
+    en:invalid_option) echo "Invalid option" ;;
+    fr:invalid_option) echo "Option invalide" ;;
+    pt:invalid_option) echo "Opcao invalida" ;;
+
+    es:main_presets) echo "Presets rapidos" ;;
+    en:main_presets) echo "Quick presets" ;;
+    fr:main_presets) echo "Presets rapides" ;;
+    pt:main_presets) echo "Presets rapidos" ;;
+
+    es:main_manual) echo "Configuracion manual (toggle por toggle)" ;;
+    en:main_manual) echo "Manual configuration (toggle by toggle)" ;;
+    fr:main_manual) echo "Configuration manuelle (toggle par toggle)" ;;
+    pt:main_manual) echo "Configuracao manual (toggle por toggle)" ;;
+
+    es:main_pending) echo "Ver cambios pendientes" ;;
+    en:main_pending) echo "View pending changes" ;;
+    fr:main_pending) echo "Voir les changements en attente" ;;
+    pt:main_pending) echo "Ver alteracoes pendentes" ;;
+
+    es:main_backup) echo "Backup de politica actual" ;;
+    en:main_backup) echo "Backup current policy" ;;
+    fr:main_backup) echo "Sauvegarder la politique actuelle" ;;
+    pt:main_backup) echo "Backup da politica atual" ;;
+
+    es:main_restore) echo "Restaurar backup" ;;
+    en:main_restore) echo "Restore backup" ;;
+    fr:main_restore) echo "Restaurer sauvegarde" ;;
+    pt:main_restore) echo "Restaurar backup" ;;
+
+    es:main_reset) echo "Reset total (quitar slimbrave.json)" ;;
+    en:main_reset) echo "Full reset (remove slimbrave.json)" ;;
+    fr:main_reset) echo "Reset complet (supprimer slimbrave.json)" ;;
+    pt:main_reset) echo "Reset total (remover slimbrave.json)" ;;
+
+    es:main_status) echo "Estado actual" ;;
+    en:main_status) echo "Current status" ;;
+    fr:main_status) echo "Etat actuel" ;;
+    pt:main_status) echo "Estado atual" ;;
+
+    es:main_language) echo "Cambiar idioma" ;;
+    en:main_language) echo "Change language" ;;
+    fr:main_language) echo "Changer la langue" ;;
+    pt:main_language) echo "Mudar idioma" ;;
+
+    es:main_help) echo "Ayuda / Verificacion" ;;
+    en:main_help) echo "Help / Verification" ;;
+    fr:main_help) echo "Aide / Verification" ;;
+    pt:main_help) echo "Ajuda / Verificacao" ;;
+
+    es:main_exit) echo "Salir" ;;
+    en:main_exit) echo "Exit" ;;
+    fr:main_exit) echo "Quitter" ;;
+    pt:main_exit) echo "Sair" ;;
+
+    es:main_select) echo "Selecciona opcion: " ;;
+    en:main_select) echo "Choose option: " ;;
+    fr:main_select) echo "Choisissez une option: " ;;
+    pt:main_select) echo "Escolha uma opcao: " ;;
+
+    es:bye) echo "Hasta luego." ;;
+    en:bye) echo "See you later." ;;
+    fr:bye) echo "A bientot." ;;
+    pt:bye) echo "Ate logo." ;;
+
+    es:pending_short) echo "Pendientes" ;;
+    en:pending_short) echo "Pending" ;;
+    fr:pending_short) echo "En attente" ;;
+    pt:pending_short) echo "Pendentes" ;;
+
+    es:language_title) echo "Idioma / Language" ;;
+    en:language_title) echo "Language" ;;
+    fr:language_title) echo "Langue" ;;
+    pt:language_title) echo "Idioma" ;;
+
+    es:lang_changed) echo "Idioma actualizado." ;;
+    en:lang_changed) echo "Language updated." ;;
+    fr:lang_changed) echo "Langue mise a jour." ;;
+    pt:lang_changed) echo "Idioma atualizado." ;;
+
+    es:presets_title) echo "Presets rapidos" ;;
+    en:presets_title) echo "Quick presets" ;;
+    fr:presets_title) echo "Presets rapides" ;;
+    pt:presets_title) echo "Presets rapidos" ;;
+
+    es:recommended_tip) echo "Tip: Enter aplica balanced (recomendado)." ;;
+    en:recommended_tip) echo "Tip: Enter applies balanced (recommended)." ;;
+    fr:recommended_tip) echo "Astuce: Entree applique balanced (recommande)." ;;
+    pt:recommended_tip) echo "Dica: Enter aplica balanced (recomendado)." ;;
+
+    es:preset_prompt) echo "Selecciona preset [1]: " ;;
+    en:preset_prompt) echo "Choose preset [1]: " ;;
+    fr:preset_prompt) echo "Choisissez un preset [1]: " ;;
+    pt:preset_prompt) echo "Escolha preset [1]: " ;;
+
+    es:manual_title) echo "Configuracion manual" ;;
+    en:manual_title) echo "Manual configuration" ;;
+    fr:manual_title) echo "Configuration manuelle" ;;
+    pt:manual_title) echo "Configuracao manual" ;;
+
+    es:status_title_file) echo "Archivo de politica" ;;
+    en:status_title_file) echo "Policy file" ;;
+    fr:status_title_file) echo "Fichier de politique" ;;
+    pt:status_title_file) echo "Arquivo de politica" ;;
+
+    es:status_title_menu) echo "Configuracion en menu" ;;
+    en:status_title_menu) echo "Menu configuration" ;;
+    fr:status_title_menu) echo "Configuration du menu" ;;
+    pt:status_title_menu) echo "Configuracao no menu" ;;
+
+    es:status_title_sync) echo "Sincronizacion" ;;
+    en:status_title_sync) echo "Synchronization" ;;
+    fr:status_title_sync) echo "Synchronisation" ;;
+    pt:status_title_sync) echo "Sincronizacao" ;;
+
+    es:help_title) echo "Como usar:" ;;
+    en:help_title) echo "How to use:" ;;
+    fr:help_title) echo "Comment utiliser:" ;;
+    pt:help_title) echo "Como usar:" ;;
+
+    *) echo "$key" ;;
   esac
 }
 
@@ -256,7 +400,7 @@ print_banner() {
 }
 
 pause_enter() {
-  read -r -p "Presiona Enter para continuar..." _
+  read -r -p "$(t press_enter)" _
 }
 
 json_string() {
@@ -811,7 +955,7 @@ choose_dns_mode() {
         return
         ;;
       0) return ;;
-      *) say_err "Opcion invalida"; sleep 1 ;;
+      *) say_err "$(t invalid_option)"; sleep 1 ;;
     esac
   done
 }
@@ -837,7 +981,7 @@ category_menu() {
     done
 
     echo
-    echo "Cambios se aplican automaticamente al hacer toggle."
+    echo "Auto-apply enabled"
     hotkey_item "b" "volver"
     hotkey_item "q" "salir"
     echo
@@ -858,7 +1002,7 @@ category_menu() {
             pause_enter
           fi
         else
-          say_err "Opcion invalida"
+          say_err "$(t invalid_option)"
           sleep 1
         fi
         ;;
@@ -870,7 +1014,7 @@ manual_config_menu() {
   while true; do
     screen_clear
     print_banner
-    echo "Configuracion manual"
+    echo "$(t manual_title)"
     echo
     menu_item "1" "Telemetria y reportes"
     menu_item "2" "Privacidad y seguridad"
@@ -887,7 +1031,7 @@ manual_config_menu() {
       4) category_menu "performance" "Rendimiento y bloat" ;;
       5) choose_dns_mode ;;
       0) return ;;
-      *) say_err "Opcion invalida"; sleep 1 ;;
+      *) say_err "$(t invalid_option)"; sleep 1 ;;
     esac
   done
 }
@@ -896,7 +1040,7 @@ preset_menu() {
   while true; do
     screen_clear
     print_banner
-    echo "Presets rapidos"
+    echo "$(t presets_title)"
     echo
     menu_item "1" "balanced (recomendado)"
     menu_item "2" "max-privacy"
@@ -905,8 +1049,8 @@ preset_menu() {
     menu_item "5" "parental"
     menu_item "0" "volver"
     echo
-    echo "Tip: Enter aplica balanced (recomendado)."
-    read -r -p "Selecciona preset [1]: " c
+    echo "$(t recommended_tip)"
+    read -r -p "$(t preset_prompt)" c
     c=${c:-1}
     case "$c" in
       1)
@@ -960,7 +1104,7 @@ preset_menu() {
         return
         ;;
       0) return ;;
-      *) say_err "Opcion invalida"; sleep 1 ;;
+      *) say_err "$(t invalid_option)"; sleep 1 ;;
     esac
   done
 }
@@ -986,9 +1130,33 @@ show_pending_changes() {
   fi
 
   if (( count == 0 )); then
-    say_warn "Sin cambios pendientes."
+    say_warn "No pending changes."
   fi
   pause_enter
+}
+
+language_menu() {
+  while true; do
+    screen_clear
+    print_banner
+    echo "$(t language_title)"
+    echo
+    menu_item "1" "Espanol"
+    menu_item "2" "English"
+    menu_item "3" "Francais"
+    menu_item "4" "Portugues"
+    menu_item "0" "$(t main_exit)"
+    echo
+    read -r -p "$(t main_select)" c
+    case "$c" in
+      1) UI_LANG="es"; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      2) UI_LANG="en"; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      3) UI_LANG="fr"; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      4) UI_LANG="pt"; say_ok "$(t lang_changed)"; pause_enter; return ;;
+      0) return ;;
+      *) say_err "$(t invalid_option)"; sleep 1 ;;
+    esac
+  done
 }
 
 show_status_screen() {
@@ -1000,7 +1168,7 @@ show_status_screen() {
   keys=$(count_policy_keys_file "$POLICY_FILE")
   pending=$(pending_changes_count)
 
-  echo "Archivo de politica"
+  echo "$(t status_title_file)"
   if [[ -f "$POLICY_FILE" ]]; then
     printf " - %b[OK]%b %s\n" "$C_OK" "$C_RESET" "$POLICY_FILE"
     echo " - Keys activas en disco: $keys"
@@ -1010,12 +1178,12 @@ show_status_screen() {
   fi
 
   echo
-  echo "Configuracion en menu"
+  echo "$(t status_title_menu)"
   echo " - Opciones ON: $(count_enabled)/${#OPTION_IDS[@]}"
   echo " - DNS: $(show_dns_status)"
 
   echo
-  echo "Sincronizacion"
+  echo "$(t status_title_sync)"
   echo " - Pendientes sin aplicar: $pending"
   if (( pending == 0 )); then
     printf " - %bEstado:%b Menu y disco en sincronizacion\n" "$C_OK" "$C_RESET"
@@ -1033,7 +1201,7 @@ show_help() {
   screen_clear
   print_banner
   cat <<EOF
-Como usar:
+$(t help_title)
 1) Elige un preset rapido o entra a configuracion manual.
 2) Cambios se aplican automaticamente.
 3) Revisa cambios pendientes/estado.
@@ -1053,19 +1221,20 @@ main_menu() {
   while true; do
     screen_clear
     print_banner
-    printf "%bPendientes:%b %s | %bDNS:%b %s\n" "$C_ACCENT" "$C_RESET" "$(pending_changes_count)" "$C_ACCENT" "$C_RESET" "$(show_dns_status)"
+    printf "%b%s:%b %s | %bDNS:%b %s\n" "$C_ACCENT" "$(t pending_short)" "$C_RESET" "$(pending_changes_count)" "$C_ACCENT" "$C_RESET" "$(show_dns_status)"
     echo
-    menu_item "1" "Presets rapidos"
-    menu_item "2" "Configuracion manual (toggle por toggle)"
-    menu_item "3" "Ver cambios pendientes"
-    menu_item "4" "Backup de politica actual"
-    menu_item "5" "Restaurar backup"
-    menu_item "6" "Reset total (quitar slimbrave.json)"
-    menu_item "7" "Estado actual"
-    menu_item "8" "Ayuda / Verificacion"
-    menu_item "0" "Salir"
+    menu_item "1" "$(t main_presets)"
+    menu_item "2" "$(t main_manual)"
+    menu_item "3" "$(t main_pending)"
+    menu_item "4" "$(t main_backup)"
+    menu_item "5" "$(t main_restore)"
+    menu_item "6" "$(t main_reset)"
+    menu_item "7" "$(t main_status)"
+    menu_item "8" "$(t main_language)"
+    menu_item "9" "$(t main_help)"
+    menu_item "0" "$(t main_exit)"
     echo
-    read -r -p "Selecciona opcion: " c
+    read -r -p "$(t main_select)" c
 
     case "$c" in
       1) preset_menu ;;
@@ -1075,9 +1244,10 @@ main_menu() {
       5) restore_backup; pause_enter ;;
       6) reset_policy; pause_enter ;;
       7) show_status_screen ;;
-      8) show_help ;;
-      0) echo "Hasta luego."; exit 0 ;;
-      *) say_err "Opcion invalida"; sleep 1 ;;
+      8) language_menu ;;
+      9) show_help ;;
+      0) echo "$(t bye)"; exit 0 ;;
+      *) say_err "$(t invalid_option)"; sleep 1 ;;
     esac
   done
 }
@@ -1087,6 +1257,7 @@ main_menu() {
 # -----------------------------------------------------------------------------
 
 main() {
+  detect_default_language
   init_colors
   init_options
   load_current_policy
